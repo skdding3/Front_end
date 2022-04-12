@@ -1,0 +1,9 @@
+div {
+  width: 200px;
+  height: 200px;
+  background-color: gold;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/363px-CSS3_logo_and_wordmark.svg.png?20160530175649");
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
