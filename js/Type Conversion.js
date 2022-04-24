@@ -1,5 +1,12 @@
 // 형 변환 (Type Conversion)
 
+// truthy (참 같은 값)
+// true, {}, [], 1, 2, 'false', -12, '3.14'
+
+// falsy (거짓 같은 값)
+// false, '', null, undefined, 0, -0, NaN
+
+
 const a = 1
 const b = '1'
 
