@@ -44,3 +44,37 @@ class User {
 
 const sunki = new User('Sunki', 'Kim')
 console.log(sunki.getFullName())
+
+
+// 상속 (확장)
+
+class Vehicle {
+  constructor (name, Wheel) {
+    this.name = name
+    this.Wheel = Wheel
+  }
+}
+const myVehicle = new Vehicle('운송수단', 2)
+console.log(myVehicle)
+
+class Bicycle extends Vehicle {
+  constructor (name, Wheel) {
+    super (name, Wheel)
+  }
+}
+const myBicycle = new Bicycle('삼천리', 2)
+const daughtersBicycle = new Bicycle('세발', 3)
+console.log(myBicycle)
+console.log(daughtersBicycle)
+
+class Car extends Vehicle {
+  constructor (name, Wheel, license) {
+    super (name, Wheel)
+    this.license = license
+  }
+}
+const myCar = new Car('벤츠', 4, true)
+const daughtersCar = new Car('포르쉐', 4, false)
+
+console.log(myCar)
+console.log(daughtersCar)
