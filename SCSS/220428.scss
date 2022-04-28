@@ -1,0 +1,79 @@
+// 상위 선택자 참조
+
+.fs {
+  &-small { font-size: 12px; }
+  &-medium { font-size: 14px; }
+  &-large { font-size: 16px;}
+}
+
+
+// 중첩된 속성
+// 네임스페이스 (속성 유효범위) 구조에서 사용하기 유용하다.
+
+.box {
+  font: {
+    weight: bold;
+    size: 10px;
+    family: sans-serif;
+  };
+  margin: {
+    top: 10px;
+    bottom: 12px;
+  };
+  padding: {
+    top: 20px;
+    bottom: 30px;
+  };
+}
+
+// 변수 Variables
+
+$size : 200px; // 변수를 별도로 지정하여 선언하고 변환을 주면 수정때 편하게 적용가능하다.
+
+.container {
+  position: fixed;
+  top: $size;
+  .item {
+    width: $size;
+    height: $size;
+    transform: translateX($size);
+  }
+}
+
+// 재활용 (Mixins)
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  @include center;
+  .item {
+    @include center;
+  }
+}
+
+.box {
+  @include center;
+}
+
+
+// 반복문
+
+// for (let i = 0; i < 10; i += 1;) {
+//   console.log(`loop-${i}`)
+// }
+
+@for $i from 1 through 10 {
+  .box {
+    width : 100px;
+  }
+}
+
+@for $i from 1 through 10 {
+  .box:nth-child(#{$i}) {
+    width : 100px;
+  }
+}
