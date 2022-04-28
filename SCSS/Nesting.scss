@@ -1,0 +1,16 @@
+// 중첩 작성법
+
+
+.container {
+  ul {
+    li {
+      font-size: 40px;
+      .name {
+        color: royalblue;
+      }
+      .age {
+        color: orange;
+      }
+    }
+  }
+}
