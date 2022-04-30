@@ -5,7 +5,7 @@ Front_end study
 
 Skills
 -------
-HTML5, CSS3, JavaScript(ES6)
+HTML5, CSS3, JavaScript(ES6), React
 
 
 
